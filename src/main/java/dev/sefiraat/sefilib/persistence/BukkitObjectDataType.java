@@ -19,7 +19,7 @@ import java.io.IOException;
  *
  * @param <T> The type of {@link ConfigurationSerializable} to store
  */
-public class BukkitObjectDataType<T extends ConfigurationSerializable> implements PersistentDataType<byte[], T> {
+public class BukkitObjectDataType<T> implements PersistentDataType<byte[], T> {
 
     @Nonnull
     private final Class<T> clazz;

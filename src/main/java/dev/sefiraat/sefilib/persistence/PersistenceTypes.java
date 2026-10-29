@@ -28,4 +28,18 @@ public class PersistenceTypes {
     public static final PersistentDataType<byte[], OfflinePlayer> OFFLINE_PLAYER = new BukkitObjectDataType<>(
         OfflinePlayer.class
     );
+    /**
+     * The PersistentDataType for a {@link org.bukkit.Location}
+     */
+    public static final PersistentDataType<byte[], org.bukkit.Location> LOCATION = new BukkitObjectDataType<>(org.bukkit.Location.class);
+
+    /**
+     * The PersistentDataType for an {@link ItemStack} array
+     */
+    public static final PersistentDataType<byte[], ItemStack[]> ITEM_STACK_ARRAY = new BukkitObjectDataType<>(ItemStack[].class);
+
+    /**
+     * The PersistentDataType for a double array
+     */
+    public static final PersistentDataType<byte[], double[]> DOUBLE_ARRAY = new DoubleArrayDataType();
 }
