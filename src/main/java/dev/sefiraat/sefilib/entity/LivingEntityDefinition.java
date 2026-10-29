@@ -2,7 +2,7 @@ package dev.sefiraat.sefilib.entity;
 
 import com.google.common.collect.Sets;
 import dev.sefiraat.sefilib.version.Versions;
-import com.github.drakescraft_labs.slimefun4.libraries.dough.versions.SemanticVersion;
+import io.github.thebusybiscuit.slimefun4.libraries.dough.versions.SemanticVersion;
 import org.bukkit.entity.EntityType;
 
 import javax.annotation.Nullable;

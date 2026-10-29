@@ -1,7 +1,7 @@
 package dev.sefiraat.sefilib.entity;
 
 import dev.sefiraat.sefilib.version.Versions;
-import com.github.drakescraft_labs.slimefun4.libraries.dough.versions.SemanticVersion;
+import io.github.thebusybiscuit.slimefun4.libraries.dough.versions.SemanticVersion;
 
 import java.util.Collections;
 import java.util.HashSet;

@@ -1,6 +1,6 @@
 package dev.sefiraat.sefilib.version;
 
-import com.github.drakescraft_labs.slimefun4.libraries.dough.versions.SemanticVersion;
+import io.github.thebusybiscuit.slimefun4.libraries.dough.versions.SemanticVersion;
 
 public class Versions {
 

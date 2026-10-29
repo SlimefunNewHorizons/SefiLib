@@ -32,11 +32,11 @@
 
     <groupId>com.github.drakescraft_labs</groupId>
     <artifactId>SefiLib</artifactId>
-    <version>0.3.0-Drake-1.21.11</version>
+    <version>0.3.1-Universal-26.x-SNAPSHOT</version>
 
     <properties>
-        <maven.compiler.source>21</maven.compiler.source>
-        <maven.compiler.target>21</maven.compiler.target>
+        <maven.compiler.source>25</maven.compiler.source>
+        <maven.compiler.target>25</maven.compiler.target>
     </properties>
 
     <build>
@@ -50,7 +50,7 @@
                     <relocations>
                         <relocation>
                             <pattern>io.github.bakedlibs.dough</pattern>
-                            <shadedPattern>dev.sefiraat.sefilib.dough</shadedPattern>
+                            <shadedPattern>io.github.thebusybiscuit.slimefun4.libraries.dough</shadedPattern>
                         </relocation>
                     </relocations>
                     <filters>
@@ -227,13 +227,13 @@
         <dependency>
             <groupId>io.papermc.paper</groupId>
             <artifactId>paper-api</artifactId>
-            <version>1.21.11-R0.1-SNAPSHOT</version>
+            <version>26.2.build.133-stable</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>com.github.drakescraft_labs</groupId>
             <artifactId>slimefun-core</artifactId>
-            <version>11.0-Drake-1.21.11-SNAPSHOT</version>
+            <version>11.0-Universal-26.x-SNAPSHOT</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
@@ -245,7 +245,7 @@
             <groupId>io.github.baked-libs</groupId>
             <artifactId>dough-api</artifactId>
             <version>1.2.0</version>
-            <scope>compile</scope>
+            <scope>provided</scope>
         </dependency>
     </dependencies>
 
