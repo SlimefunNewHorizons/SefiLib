@@ -77,8 +77,27 @@ public class DisplayGroupManager implements Listener {
             if (slimefunItem instanceof DisplayInteractable
                 && Protections.hasPermission(player, block, Interaction.BREAK_BLOCK)
             ) {
+                event.setCancelled(true);
                 BlockBreakEvent breakEvent = new BlockBreakEvent(block, player);
                 Bukkit.getPluginManager().callEvent(breakEvent);
+                if (!breakEvent.isCancelled()) {
+                    if (slimefunItem instanceof dev.sefiraat.sefilib.slimefun.blocks.DisplayGroupBlock dgb) {
+                        DisplayGroup group = dgb.getDisplayGroup(block.getLocation());
+                        if (group != null) {
+                            group.remove();
+                        }
+                    } else {
+                        event.getEntity().remove();
+                    }
+                    if (player.getGameMode() == org.bukkit.GameMode.CREATIVE) {
+                        block.setType(org.bukkit.Material.AIR);
+                        BlockStorage.clearBlockInfo(block);
+                    } else {
+                        block.breakNaturally();
+                        BlockStorage.clearBlockInfo(block);
+                    }
+                    block.getWorld().playSound(block.getLocation(), org.bukkit.Sound.BLOCK_STONE_BREAK, 1.0f, 1.0f);
+                }
             }
         }
     }

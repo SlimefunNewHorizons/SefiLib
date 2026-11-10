@@ -68,11 +68,12 @@ public abstract class DisplayGroupBlock extends SlimefunItem implements DisplayI
                 public void onPlayerBreak(BlockBreakEvent e, ItemStack item, List<ItemStack> drops) {
                     Location location = e.getBlock().getLocation();
                     DisplayGroup displayGroup = getDisplayGroup(location);
-                    if (displayGroup == null) {
-                        return;
+                    if (displayGroup != null) {
+                        displayGroup.remove();
                     }
-                    displayGroup.remove();
                     e.getBlock().setType(Material.AIR);
+                    BlockStorage.clearBlockInfo(location);
+                    whenBroken(e, item, drops);
                 }
             }
         );
